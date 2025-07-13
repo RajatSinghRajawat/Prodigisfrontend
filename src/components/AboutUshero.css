@@ -1,0 +1,61 @@
+.AboutUshero{
+.about-hero{
+max-width: 100%;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.hero-content h1{
+    color:#fff;
+    font-family: Albert Sans;
+font-weight: 700;
+font-size: 48px;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: capitalize;
+
+}
+.description{
+    font-family: Albert Sans;
+font-weight: 700;
+font-size: 26px;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: capitalize;
+color:#FFF;
+}
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(56, 142, 59, 0.3);
+}
+.hero-button{
+    display: flex;
+    gap: 20px;
+}
+.bannerbut{
+border-radius: 6px;
+padding: 10px 20px;
+background: #4CAF50;
+color: #fff;
+border: none;
+
+
+}
+
+.partners>p {
+    color: #000;
+    margin-bottom: 20px;
+    font-family: Albert Sans;
+font-weight: 400;
+font-size: 20px;
+line-height: 140%;
+text-align: left;
+letter-spacing: 0%;
+
+}
+/* 
+.about-hero > * {
+    position: relative;
+    z-index: 2;} */
+    }

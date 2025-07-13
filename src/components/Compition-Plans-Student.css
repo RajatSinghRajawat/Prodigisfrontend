@@ -1,0 +1,68 @@
+.plan-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 450px;
+  /* width: 100%; */
+  text-align: center;
+  background: #fff;
+  
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08), 0 1.5px 6px rgba(44, 62, 80, 0.03);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 20px auto;
+}
+
+.plan-card h2, .plan-card h3 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.plan-card p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.plan-card li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #666;
+}
+
+.plan-card .included {
+  color: #666;
+}
+
+.plan-card .included svg {
+  color: #28a745;
+}
+
+.plan-card .excluded svg {
+  color: #dc3545;
+}
+
+.plan-card button, .choose-plan-btn {
+  background: #fff;
+  color: #28a745;
+  border: 1.5px solid #28a745;
+  padding: 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 16px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.plan-card button:hover, .choose-plan-btn:hover {
+  background: #28a745;
+  color: #fff;
+}

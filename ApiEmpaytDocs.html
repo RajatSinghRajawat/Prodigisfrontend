@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Redux Toolkit API Documentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --light-bg: #f3f4f6;
+            --border-color: #e5e7eb;
+            --success-color: #059669;
+            --warning-color: #d97706;
+            --error-color: #dc2626;
+            --code-bg: #282c34;
+            --code-text: #abb2bf;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin: 2.5rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin: 2rem 0 1rem;
+        }
+
+        pre {
+            background: var(--code-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        code {
+            font-family: 'Fira Code', 'Courier New', monospace;
+            color: var(--code-text);
+            font-size: 0.9rem;
+        }
+
+        .endpoint {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .endpoint:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .method {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            color: white;
+            font-weight: 600;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .post { background-color: var(--success-color); }
+        .get { background-color: var(--primary-color); }
+        .put { background-color: var(--warning-color); }
+        .delete { background-color: var(--error-color); }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        th {
+            background: var(--light-bg);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: var(--light-bg);
+        }
+
+        .note {
+            background: #fff8e6;
+            border-left: 4px solid #fbbf24;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .note h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .note ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .note li {
+            margin: 0.5rem 0;
+            color: #78350f;
+        }
+
+        /* Code block syntax highlighting */
+        .keyword { color: #c678dd; }
+        .string { color: #98c379; }
+        .comment { color: #7f848e; font-style: italic; }
+        .function { color: #61afef; }
+        .variable { color: #e06c75; }
+        .operator { color: #56b6c2; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            pre {
+                padding: 1rem;
+            }
+
+            .endpoint {
+                padding: 1.5rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        .nav-section {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            z-index: 100;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        .nav-item a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-item a:hover {
+            background: var(--light-bg);
+            color: var(--primary-color);
+        }
+
+        /* Copy Button for Code Blocks */
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #21252b;
+            padding: 0.5rem 1rem;
+            border-radius: 8px 8px 0 0;
+            color: var(--code-text);
+        }
+
+        .copy-button {
+            background: transparent;
+            border: 1px solid var(--code-text);
+            color: var(--code-text);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s ease;
+        }
+
+        .copy-button:hover {
+            background: var(--code-text);
+            color: var(--code-bg);
+        }
+
+        /* Animation for Code Blocks */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        pre {
+            animation: fadeIn 0.3s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Redux Toolkit API Documentation</h1>
+            <p>Complete guide for implementing Redux Toolkit with React</p>
+        </div>
+
+        <nav class="nav-section">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#setup">Setup</a></li>
+                <li class="nav-item"><a href="#configuration">Configuration</a></li>
+                <li class="nav-item"><a href="#components">Components</a></li>
+                <li class="nav-item"><a href="#integration">Integration</a></li>
+                <li class="nav-item"><a href="#best-practices">Best Practices</a></li>
+            </ul>
+        </nav>
+
+        <section id="setup">
+            <h2>Project Setup</h2>
+            <p>First, install the required dependencies:</p>
+            <div class="code-header">
+                <span>Installation</span>
+                <button class="copy-button">Copy</button>
+            </div>
+            <pre><code>npm install @reduxjs/toolkit react-redux react-toastify</code></pre>
+        </section>
+
+        <section id="configuration">
+            <h2>API Configuration</h2>
+            <p>Create the following files to set up the API configuration:</p>
+
+            <div class="endpoint">
+                <h3>API Endpoints Configuration</h3>
+                <div class="code-header">
+                    <span>src/config/apiConfig.js</span>
+                    <button class="copy-button">Copy</button>
+                </div>
+                <pre><code>export const API_BASE_URL = 'http://localhost:3001;
+
+export const API_ENDPOINTS = {
+    SEND_OTP: '/api/otp/send',
+    VERIFY_OTP: '/api/otp/verify',
+    REGISTER_USER: '/api/users/register',
+    LOGIN: '/api/users/login',
+    SEND_OTP_ORGANISER_PHONE: '/api/organisations/send-mobile-otp',
+};</code></pre>
+            </div>
+
+            <div class="endpoint">
+                <h3>API Interceptors</h3>
+                <div class="code-header">
+                    <span>src/config/interceptors.js</span>
+                    <button class="copy-button">Copy</button>
+                </div>
+                <pre><code>import { fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+
+export const baseQuery = fetchBaseQuery({
+    baseUrl: 'http://localhost:3001',
+    prepareHeaders: (headers, { getState }) => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            headers.set('authorization', `Bearer ${token}`);
+        }
+        headers.set('Content-Type', 'application/json');
+        headers.set('Accept', 'application/json');
+        return headers;
+    },
+});
+
+export const responseHandler = async (response) => {
+    if (response.error) {
+        if (response.error.status === 401) {
+            localStorage.removeItem('token');
+            window.location.href = '/login';
+        }
+        return Promise.reject(response.error);
+    }
+    return response;
+};
+
+export const requestHandler = async (args, api, extraOptions) => {
+    return args;
+};</code></pre>
+            </div>
+
+            <div class="endpoint">
+                <h3>API Slice Implementation</h3>
+                <div class="code-header">
+                    <span>src/store/api/apiSlice.js</span>
+                    <button class="copy-button">Copy</button>
+                </div>
+                <pre><code>import { createApi } from '@reduxjs/toolkit/query/react';
+import { API_ENDPOINTS } from '../../config/apiConfig';
+import { baseQuery, responseHandler, requestHandler } from '../../config/interceptors';
+
+export const apiSlice = createApi({
+    reducerPath: 'api',
+    baseQuery: async (args, api, extraOptions) => {
+        const modifiedArgs = await requestHandler(args, api, extraOptions);
+        const result = await baseQuery(modifiedArgs, api, extraOptions);
+        return responseHandler(result);
+    },
+    endpoints: (builder) => ({
+        sendOtp: builder.mutation({
+            query: (mobileNumber) => ({
+                url: API_ENDPOINTS.SEND_OTP,
+                method: 'POST',
+                body: { mobile_num: mobileNumber },
+            }),
+        }),
+        verifyOtp: builder.mutation({
+            query: ({ mobileNumber, otp }) => ({
+                url: API_ENDPOINTS.VERIFY_OTP,
+                method: 'POST',
+                body: { 
+                    mobile_num: mobileNumber,
+                    otp: otp
+                },
+            }),
+        }),
+        registerUser: builder.mutation({
+            query: (userData) => ({
+                url: API_ENDPOINTS.REGISTER_USER,
+                method: 'POST',
+                body: userData,
+            }),
+        }),
+        login: builder.mutation({
+            query: (credentials) => ({
+                url: API_ENDPOINTS.LOGIN,
+                method: 'POST',
+                body: credentials,
+            }),
+        }),
+    }),
+});
+
+export const { 
+    useSendOtpMutation,
+    useVerifyOtpMutation,
+    useRegisterUserMutation,
+    useLoginMutation 
+} = apiSlice;</code></pre>
+            </div>
+        </section>
+
+        <section id="components">
+            <h2>Component Implementation Examples</h2>
+
+            <div class="endpoint">
+                <h3>OTP Verification Component</h3>
+                <div class="code-header">
+                    <span>src/components/OtpVerification.jsx</span>
+                    <button class="copy-button">Copy</button>
+                </div>
+                <pre><code>import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useVerifyOtpMutation } from '../store/api/apiSlice';
+import { toast } from 'react-toastify';
+
+const OtpVerification = () => {
+    const [otp, setOtp] = useState(['', '', '', '', '', '']);
+    const navigate = useNavigate();
+    const [verifyOtp, { isLoading }] = useVerifyOtpMutation();
+
+    const handleChange = (index, value) => {
+        if (value.length <= 1 && /^\d*$/.test(value)) {
+            const newOtp = [...otp];
+            newOtp[index] = value;
+            setOtp(newOtp);
+        }
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const otpValue = otp.join('');
+        
+        if (otpValue.length !== 6) {
+            toast.error('Please enter a valid 6-digit OTP');
+            return;
+        }
+
+        try {
+            await verifyOtp({
+                mobileNumber: localStorage.getItem('tempMobile'),
+                otp: otpValue
+            }).unwrap();
+            
+            toast.success('OTP verified successfully!');
+            navigate('/registration');
+        } catch (err) {
+            toast.error(err.data?.message || 'OTP verification failed');
+        }
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            {otp.map((digit, index) => (
+                <input
+                    key={index}
+                    type="text"
+                    value={digit}
+                    onChange={(e) => handleChange(index, e.target.value)}
+                    maxLength={1}
+                />
+            ))}
+            <button type="submit" disabled={isLoading}>
+                {isLoading ? 'Verifying...' : 'Verify OTP'}
+            </button>
+        </form>
+    );
+};</code></pre>
+            </div>
+
+            <div class="endpoint">
+                <h3>Login Component</h3>
+                <div class="code-header">
+                    <span>src/components/Login.jsx</span>
+                    <button class="copy-button">Copy</button>
+                </div>
+                <pre><code>import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useLoginMutation } from '../store/api/apiSlice';
+import { toast } from 'react-toastify';
+
+const Login = () => {
+    const navigate = useNavigate();
+    const [login, { isLoading }] = useLoginMutation();
+    const [formData, setFormData] = useState({
+        email: '',
+        password: '',
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        
+        try {
+            const response = await login(formData).unwrap();
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('user', JSON.stringify(response.data.user));
+            
+            toast.success('Login successful!');
+            navigate('/dashboard');
+        } catch (err) {
+            toast.error(err.data?.message || 'Login failed');
+        }
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <input
+                type="text"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email or Mobile"
+            />
+            <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Password"
+            />
+            <button type="submit" disabled={isLoading}>
+                {isLoading ? 'Logging in...' : 'Login'}
+            </button>
+        </form>
+    );
+};</code></pre>
+            </div>
+        </section>
+
+        <section id="integration">
+            <h2>App Integration</h2>
+            <div class="endpoint">
+                <h3>Redux Store Integration</h3>
+                <div class="code-header">
+                    <span>src/App.jsx</span>
+                    <button class="copy-button">Copy</button>
+                </div>
+                <pre><code>import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+function App() {
+    return (
+        <Provider store={store}>
+            <Router>
+                <ToastContainer
+                    position="top-right"
+                    autoClose={3000}
+                    hideProgressBar={false}
+                    newestOnTop
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                />
+                {/* Your Routes Here */}
+            </Router>
+        </Provider>
+    );
+}</code></pre>
+            </div>
+        </section>
+
+        <section id="best-practices">
+            <h2>Best Practices</h2>
+            <div class="note">
+                <h3>Important Guidelines</h3>
+                <ul>
+                    <li>Always handle loading states using the isLoading property from mutations</li>
+                    <li>Implement proper error handling with try-catch blocks</li>
+                    <li>Use token management in interceptors for authentication</li>
+                    <li>Provide user feedback using toast notifications</li>
+                    <li>Validate forms before making API calls</li>
+                    <li>Keep components focused and maintainable</li>
+                    <li>Use proper TypeScript types when applicable</li>
+                    <li>Follow consistent naming conventions</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Add copy functionality to code blocks
+        document.querySelectorAll('.copy-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const pre = button.closest('.endpoint').querySelector('pre');
+                navigator.clipboard.writeText(pre.textContent);
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = 'Copy';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>

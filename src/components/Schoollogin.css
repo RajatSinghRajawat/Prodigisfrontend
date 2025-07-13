@@ -1,0 +1,77 @@
+.schoollogin{
+    .registration-form{
+        padding: 0;
+    }
+    @media (min-width:1330px) {
+        .registration-form{
+            padding: 10%;
+        }
+    }
+
+    .registration-form2{
+        padding: 0 15%;
+    }
+    
+
+
+    .social-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        margin-bottom: 10px;
+    }
+
+   
+
+    .social-button:hover {
+        background: #f8f9fa;
+        border-color: #d0d0d0;
+        color: #333 !important;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .social-button img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
+
+    .social-button.google {
+        border-color: #303131;
+        color: black;
+    }
+
+  
+
+    .social-button.microsoft {
+        border-color: #303131;
+        color: black;
+    }
+
+
+    .social-button.sso {
+        border-color: #303131;
+        color: black;
+    }
+
+    .social-button.sso:hover {
+        background: #2B8C38;
+        color: white !important;
+    }
+
+    .social-button{
+        white-space:nowrap;
+    }
+}
+.error-text {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+ 

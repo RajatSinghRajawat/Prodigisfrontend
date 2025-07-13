@@ -1,0 +1,141 @@
+.registration-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.registration-container::before {
+  content: '';
+  background-color: #1B4D2E;
+  grid-column: 1;
+}
+
+.registration-form {
+  grid-column: 3;
+  display: flex;
+  background: #fff;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15%;
+}
+
+.registration-form h1 {
+  /* text-align: center; */
+  margin-top: 5rem;
+  color: #1A1A1A;
+  font-size: 31px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 4rem !important;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  color: #666;
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+
+.mobile-input {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.country-code {
+  color: #1A1A1A;
+  font-size: 1rem;
+  padding-right: 1rem;
+  opacity: 0.8;
+}
+
+.mobile-input input {
+  flex: 1;
+  border: none !important;
+  outline: none;
+  font-size: 1rem;
+  color: #1A1A1A;
+  padding: 0.25rem 0;
+  background: transparent;
+}
+
+.mobile-input input::placeholder {
+  color: #1A1A1A;
+  opacity: 0.8;
+}
+
+.terms-checkbox {
+  display: flex;
+  
+  align-items: center;
+  gap: 0.75rem;
+  margin: 2rem 0;
+}
+
+.terms-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  cursor: pointer;
+  accent-color: #65B741;
+}
+
+.terms-checkbox label {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.form-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.submit-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #4CAF4F;
+  color: white;
+  border: none;
+  float: right;
+  height: fit-content;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #549c36;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 2rem;
+  color: #424242;
+  font-size: 0.875rem;
+}
+
+.login-link a {
+  color: #6366F1;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 0.25rem;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+} 

@@ -1,0 +1,232 @@
+.registration-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.registration-container::before {
+  content: '';
+  background-color: #1B4D2E;
+  grid-column: 1;
+}
+.registration-form {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15%;
+}
+.registration-form h1 {
+  text-align: center;
+  color: #242424;
+  font-size: 31px;
+  font-weight: 700;
+  font-family: Albert Sans, sans-serif;
+  margin-bottom: 2rem;
+}
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+/* Only works in Chrome */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+}
+
+.input-error, .error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+  max-width: 100%;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.date-input {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.calendar-icon {
+  position: absolute;
+  right: 10px;
+  top: 70%;
+  transform: translateY(-50%);
+  pointer-events: none; /* prevent clicking */
+}
+
+.registration-form {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15%;
+}
+
+.registration-form h1 {
+  text-align: center;
+  color: #242424;
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: Albert Sans, sans-serif;
+  margin-bottom: 2rem;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #EEEEEE;
+  border-radius: 50px;
+  background: #FAFAFA;
+  color: #1A1A1A;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.social-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-button:hover {
+  background: #f1f3f5;
+  color: #1A1A1A;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.form-group {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  display: block;
+  color: #757575;
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+
+.form-group input[type="password"],
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input {
+  font-weight: 400;
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 0;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #1A1A1A;
+  background: #ffffff;
+  transition: border-color 0.2s;
+  border: none;
+  border-bottom: 1px solid #CDCDCD;
+  border-radius: 0;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #CDCDCD;
+  /* No color change on focus */
+}
+.date-input {
+  font-size: 16px;
+  padding: 10px 12px;
+  border: none;
+  border-bottom: 1px solid #CDCDCD;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  background-color: transparent;
+}
+
+
+
+.form-group input::placeholder {
+  color: #1A1A1A;
+  opacity: 0.8;
+}
+
+.password-group .password-input {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.75rem;
+  top: 75%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-password img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+}
+
+.form-button{
+  display: flex;
+  justify-content: center;
+}
+.submit-btn {
+  width: 33%;
+  padding: 0.875rem;
+  background-color: #65B741;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 1rem;
+  }
+
+.submit-btn:hover {
+  background-color: #549c36;
+} 
+
+.email-registration-page .show-error, .email-registration-page .form-group{
+  flex-direction: column !important;
+  justify-content: start;
+  align-items: start;
+  gap: 0;
+  display: flex !important;
+
+}
+ 

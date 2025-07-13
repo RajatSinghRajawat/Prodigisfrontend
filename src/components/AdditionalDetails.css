@@ -1,0 +1,158 @@
+.heading-details{
+    margin:  0 8px 48px ;
+}
+
+
+
+.form-button{
+    display: flex;
+    justify-content: center;
+  }
+  .submit-btn {
+    width: 33%;
+    padding: 0.875rem;
+    background-color: #388E3B;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 1rem;
+    }
+  
+  .submit-btn:hover {
+    background-color: #549c36;
+  } 
+
+  .select-input{
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    appearance: none;
+    background-color: #fff;
+ font-size: 14px;
+  }
+
+  .Organiserform-detail-form .form-group{
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 6px 0 6px 0;
+  border: none;
+  border-bottom: 1.5px solid #bdbdbd;
+  border-radius: 0;
+  font-size: 1rem;
+  background: transparent;
+  margin-top: 6px;
+  margin-bottom: 24px;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-bottom: 2px solid #222;
+  outline: none;
+  background: transparent;
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg fill="%23666" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 8px center/18px 18px;
+  padding-right: 32px;
+  cursor: pointer;
+}
+
+.form-group{}
+
+.addreg-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(to left, #ffffff 50%, #03330f 50%);
+}
+
+.addreg-form-box {
+  width: 50%;
+  padding: 50px;
+  background-color: white;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.addreg-heading {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.addreg-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.addreg-group label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.addreg-group input {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.addreg-select-wrapper {
+  margin-top: 10px;
+}
+
+.addreg-select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.addreg-button-wrapper {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.addreg-submit-btn {
+  background: linear-gradient(to right, #2e7d32, #1b5e20);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, cursor 0.3s;
+}
+
+.addreg-submit-btn:disabled {
+  background: #D3D3D3 !important;
+  color: #888 !important;
+  cursor: not-allowed !important;
+  box-shadow: none;
+}
+
+.addreg-submit-btn:hover:enabled {
+  background: linear-gradient(to right, #388e3c, #2e7d32);
+}

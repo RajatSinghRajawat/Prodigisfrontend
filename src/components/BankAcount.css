@@ -1,0 +1,92 @@
+/* Wrapper */
+.bankAccount-container {
+  max-width: 600px;
+  height: 80vh;
+  margin: 80px auto;
+  padding: 1rem;
+  font-family: sans-serif;
+  
+}
+
+/* Header */
+.bankAccount-header {
+ margin: 1rem;
+}
+
+.bankAccount-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1b1b1b;
+}
+
+/* Form Layout */
+.bankAccount-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bankAccount-formGroup {
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
+}
+
+.bankAccount-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+  width: 30%;
+}
+
+.bankAccount-required {
+  color: red;
+  margin-left: 4px;
+}
+
+.bankAccount-input,
+.bankAccount-select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 70%;
+}
+
+.bankAccount-button-outer {
+  display: flex;
+  justify-content: center;
+}
+
+.bankAccount-button {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bankAccount-container {
+    padding: 1rem;
+    margin: 40px 1rem;
+  }
+
+  .bankAccount-title {
+    font-size: 1.25rem;
+  }
+
+  .bankAccount-input,
+  .bankAccount-select {
+    font-size: 0.95rem;
+  }
+
+  .bankAccount-button {
+    font-size: 0.95rem;
+  }
+}

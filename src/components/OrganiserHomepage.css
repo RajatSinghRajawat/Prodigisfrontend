@@ -1,0 +1,126 @@
+.OrganiserHomepage{
+ 
+
+.progress-container {
+    width: 100%;
+    height:auto;
+    padding: 2rem;
+}
+.card-progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card-progress p {
+  margin: 0;
+  padding: 0;
+}
+}
+.draft-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+
+.card-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.card-image {
+  width: 20px;
+  height: 20px;
+  background: #e0e0e0;
+  margin-right: 10px;
+}
+
+.card-progress {
+  flex: 2;
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar {
+  width: 150px;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #388E3B;
+  border-radius: 4px;
+}
+
+.progress-info {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.prep-button {
+  padding: 5px 10px;
+  background: #388E3B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button {
+  padding: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+
+.progress-wrapperO {
+  position: relative;
+  padding: 2rem;
+}
+
+.progress-containerO {
+  position: relative;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+.corner-img {
+  position: absolute;
+  z-index: 1;
+  width: 80px; /* or adjust */
+  height: auto;
+}
+
+.top-right {
+  top:30px;
+  right: 10px;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 10px;
+}
+
+
+.top-rightO {
+  top:10px;
+  right: 100px;
+}
+
+.bottom-leftO {
+  bottom: 0;
+  left: 100px;
+}

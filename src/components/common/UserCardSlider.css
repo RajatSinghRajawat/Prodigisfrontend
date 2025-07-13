@@ -1,0 +1,165 @@
+.Slider {
+  position: relative;
+}
+.sliderC {
+  padding: 2rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.sliderC-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.sliderC-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sliderC-cards-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem 0;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.sliderC-cards-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari */
+}
+
+.sliderC-btn {
+  background: transparent;
+  color: #103E13A8;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
+  z-index: 10;
+}
+
+.sliderC-btn:hover {
+  /* background: #0056b3; */
+}
+
+.sliderC-left {
+  left: -50px;
+}
+
+.sliderC-right {
+  right: -50px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.gap-3 {
+  gap: 1rem;
+}
+
+.overflow-auto {
+  overflow-x: auto;
+}
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.user-cards-container {
+  display: flex;
+  gap: 20px; /* Adjust gap as needed */
+  overflow: hidden; /* Hide scrollbar for smooth effect */
+  scroll-behavior: smooth;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+ 
+  background-color:#dadada;
+  color: #09370ca8;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100; 
+  margin-top: 20px;
+  aspect-ratio: 1/1;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px; 
+}
+.slider-btn span{
+  padding-bottom: 5px;
+} 
+
+.slider-btn.left {
+  left: -33px;
+}
+
+.slider-btn.right {
+  right: -33px;
+}
+
+/* Optional: Hide default scrollbar */
+.user-cards-container::-webkit-scrollbar {
+  display: none;
+}
+.user-cards-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Bookmark Icon Styles for Slider Cards */
+.bookmark-icon-slider:hover .bookmark-outline-slider {
+  color: #1a7f37 !important;
+}
+
+/* Loading Animation for Slider */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive bookmark icon for slider cards on mobile */
+@media (max-width: 768px) {
+  .bookmark-icon-slider {
+    width: 28px !important;
+    height: 28px !important;
+    top: 8px !important;
+    right: 8px !important;
+  }
+  
+  .bookmark-icon-slider svg {
+    font-size: 16px !important;
+  }
+}
+
+/* Ensure slider card images have relative positioning for bookmark placement */
+.user-card-image-container {
+  position: relative;
+}
+
+/* Smooth transitions for bookmark interactions */
+.bookmark-icon-slider {
+  backdrop-filter: blur(4px);
+}
+
+.bookmark-icon-slider:active {
+  transform: scale(0.95) !important;
+}

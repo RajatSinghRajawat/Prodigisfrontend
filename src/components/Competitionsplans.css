@@ -1,0 +1,135 @@
+.plainsummryset{
+    
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 40px;
+          }
+          .header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+          }
+          .header img {
+            width: 40px;
+            height: 40px;
+            background: #ccc;
+            border-radius: 4px;
+          }
+          .plans {
+            display: grid;
+            gap: 25px;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+          }
+          .plan {
+            background: white;
+            padding:  30px ;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px #00000012;
+      
+      
+            /* width: 250px; */
+            /* text-align: center; */
+          }
+          .plan.recommended {
+            background-color: #004225;
+            color: white;
+            position: relative;
+          }
+          .recommended-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #E8F5E9;
+            color: #4CAF50;
+            padding: 5px 10px;
+            font-size: 12px;
+            border: none;
+            border-radius: 20px;
+          }
+          .plan h2 {
+          margin-top: 0;
+          font-size: 32px;
+          color: #231D4F;
+          font-weight: 700;
+          margin-block-end: 34px;
+      }
+          .recommended h2 {
+         
+          color: #fff;
+         
+      }
+      .plan .subheading {
+          font-family: Albert Sans;
+          font-weight: 500;
+          font-size: 28px;
+          margin-bottom: 10px;
+          line-height: 100%;
+          color: #231D4F;
+          letter-spacing: 0px;
+      }
+      .recommended .subheading {
+        
+          color: #fff;
+         
+      }
+          .plan .pragraph{
+            font-family: Albert Sans;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 100%;
+      color: #848199;
+      
+      letter-spacing: 0px;
+      
+      
+      }
+      
+          .recommended .pragraph{
+      
+      color: #fff;
+      }
+      .plan ul {
+          list-style: none;
+          padding: 0;
+          text-align: left;
+          margin-top: 25px;
+          margin-bottom: 20px;
+      }
+          .plan ul li {
+            margin: 10px 0;
+            display: flex;
+            /* align-items: center; */
+            gap: 10px;
+          }
+          .plan ul li .icon {
+            font-size: 16px;
+          }
+          
+            .plan button {
+          background-color: #FFFFFF;
+          border: 1px solid #4CAF4F;
+          padding: 16px 32px;
+          color: #4CAF4F;
+          font-size: 14px;
+          display: block;
+          margin: 30px auto;
+          border-radius: 4px;
+          transition: .3s;
+          cursor: pointer;
+      }
+            .plan button:hover {
+          background-color: #4CAF4F;
+          border: 1px solid #4CAF4F;
+          color: #fff;
+         
+      }
+          .plan.recommended button {
+            background-color: #4CAF4F;
+          border: 1px solid #4CAF4F;
+          color: #fff;
+          }
+}

@@ -1,0 +1,19 @@
+.slick-dots li{
+    background: #b4d9b7;
+    border-radius: 50%; 
+    height: 15px !important;
+    width: 15px !important;
+}
+.slick-dots{
+    bottom: -40px !important;
+}
+.slick-dots li.slick-active{
+    height: 15px !important;
+    overflow: hidden;
+    width: 15px !important;
+}
+.slick-dots li.slick-active button::before{
+    height: 15px !important;
+    overflow: hidden;
+    width: 15px !important;
+}

@@ -1,0 +1,380 @@
+/* Competition Page Styles - Exact match to the design */
+
+/* Search Controls Section */
+.search-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+
+  width: 70%;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  margin-right: 8px;
+  font-size: 18px;
+  color: #666;
+}
+
+.search-input {
+
+  border: none;
+  outline: none;
+  background: transparent;
+  /* width: 50%; */
+  font-size: 16px;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.filter-btn,
+.sort-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid #4CAF4F;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #4CAF4F;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.filter-btn:hover,
+.sort-btn:hover {
+  background-color: #4CAF4F;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.filter-icon,
+.sort-icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* Filter Tags */
+.active-filters-container {
+  padding: 0 30px 10px 30px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e8f5e8;
+  color: #2d5a2d;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #4CAF4F;
+}
+
+.filter-tag-close {
+  margin-left: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #2d5a2d;
+  padding: 0 2px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.filter-tag-close:hover {
+  background-color: #d4e4d4;
+}
+
+/* Competition Cards Container */
+.user-cards-container {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 30px 40px 30px;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+/* Individual Competition Card */
+.user-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  /* width: 100%; */
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: #4CAF4F;
+}
+
+.user-card-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.user-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.user-card:hover .user-card-image {
+  transform: scale(1.05);
+}
+
+.user-card-content {
+  padding: 16px;
+}
+
+.user-card-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.3;
+}
+
+.user-card-institute {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.user-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.user-card-details .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-card-label {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+  font-weight: 400;
+}
+
+.user-card-value {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.user-card-badge {
+  background-color: #e8f5e8;
+  color: #2d5a2d;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 12px;
+}
+
+/* Loading and Error States */
+.loading-container,
+.error-message,
+.no-results {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 16px;
+  color: #666;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.error-message {
+  color: #d32f2f;
+  background-color: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+  margin: 20px 30px;
+}
+
+/* Pagination Styles */
+.pagination {
+  margin: 40px 0;
+  justify-content: center;
+}
+
+.page-link {
+  color: #4CAF4F;
+  border-color: #4CAF4F;
+  font-weight: 500;
+}
+
+.page-link:hover {
+  color: #fff;
+  background-color: #4CAF4F;
+  border-color: #4CAF4F;
+}
+
+.page-item.active .page-link {
+  background-color: #4CAF4F;
+  border-color: #4CAF4F;
+}
+
+/* Sort Modal */
+.sort-modal {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.sort-modal-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sort-modal-option {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  margin: 2px 8px;
+  color: #333;
+}
+
+.sort-modal-option:hover {
+  background-color: #f5f5f5;
+}
+
+.sort-modal-option.selected {
+  background-color: #e8f5e8;
+  color: #2d5a2d;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .user-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0 20px 40px 20px;
+  }
+
+  .search-controls {
+    padding: 15px 20px;
+    gap: 10px;
+  }
+
+  .active-filters-container {
+    padding: 0 20px 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-cards-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 15px 40px 15px;
+  }
+
+  .search-controls {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: none;
+  }
+
+  .filter-btn,
+  .sort-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .active-filters-container {
+    padding: 0 15px 10px 15px;
+  }
+}
+
+/* Container max-width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Additional spacing adjustments */
+body {
+  background-color: #f8f9fa;
+}
+
+.user-cards-container {
+  background-color: transparent;
+}
+
+/* Bookmark Icon Styles */
+.bookmark-icon-container:hover .bookmark-outline {
+  color: #1a7f37 !important;
+}
+
+/* Loading Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive bookmark icon for mobile */
+@media (max-width: 768px) {
+  .bookmark-icon-container {
+    width: 32px !important;
+    height: 32px !important;
+    top: 8px !important;
+    right: 8px !important;
+  }
+
+  .bookmark-icon-container svg {
+    font-size: 18px !important;
+  }
+}

@@ -1,0 +1,414 @@
+/* Wrapper and layout */
+.Organisation-Wrapper {
+  font-family: sans-serif;
+  color: #1b1b1b;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.Organisation-Container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Sidebar */
+.Organisation-Sidebar {
+  min-width: 240px;
+  background-color: #e8f5e9;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.Organisation-Menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Organisation-MenuItem {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.Organisation-MenuItem:hover {
+  background-color: #c8e6c9;
+}
+
+.Organisation-Active {
+  font-weight: 600;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Organisation-SidebarActions {
+  margin-top: auto;
+}
+
+.Organisation-DeleteButton {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d32f2f;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #d32f2f;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.Organisation-DeleteButton:hover {
+  background-color: #d32f2f;
+  color: #ffffff;
+}
+
+.Organisation-DeleteButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Content */
+.Organisation-Content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.Organisation-Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.Organisation-PageTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1b1b1b;
+  margin: 0;
+}
+
+.Organisation-EditButton {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #388e3c;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #388e3c;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.Organisation-EditButton:hover {
+  background-color: #388e3c;
+  color: #ffffff;
+}
+
+.Organisation-CancelButton {
+  border-color: #666;
+  color: #666;
+}
+
+.Organisation-CancelButton:hover {
+  background-color: #666;
+  color: #ffffff;
+}
+
+.Organisation-EditButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.Organisation-Card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.Organisation-Table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.Organisation-Row {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.Organisation-Row:last-child {
+  border-bottom: none;
+}
+
+.Organisation-Label {
+  padding: 1rem 0.5rem;
+  font-weight: 600;
+  min-width: 180px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.Organisation-Required {
+  color: #d32f2f;
+  margin-left: 0.25rem;
+}
+
+.Organisation-Colon {
+  padding: 1rem 0.5rem;
+  font-weight: 600;
+  color: #666;
+}
+
+.Organisation-ValueCell {
+  padding: 1rem 0.5rem;
+  width: 100%;
+}
+
+.Organisation-Value {
+  color: #1b1b1b;
+  font-weight: 500;
+}
+
+.Organisation-Input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.Organisation-Input:focus {
+  outline: none;
+  border-color: #388e3c;
+  box-shadow: 0 0 0 2px rgba(56, 142, 60, 0.1);
+}
+
+.Organisation-Input:invalid {
+  border-color: #d32f2f;
+}
+
+/* Actions */
+.Organisation-Actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.Organisation-SaveButton {
+  padding: 0.75rem 2rem;
+  background-color: #388e3c;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.Organisation-SaveButton:hover:not(:disabled) {
+  background-color: #2e7d32;
+  transform: translateY(-1px);
+}
+
+.Organisation-SaveButtonDisabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.Organisation-SaveButtonDisabled:hover {
+  transform: none;
+}
+
+.Organisation-Loading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Modal */
+.Organisation-ModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.Organisation-Modal {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.Organisation-ModalHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.Organisation-ModalIcon {
+  color: #d32f2f;
+}
+
+.Organisation-ModalHeader h3 {
+  margin: 0;
+  color: #1b1b1b;
+  font-size: 1.25rem;
+}
+
+.Organisation-Modal p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.Organisation-ModalActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.Organisation-ModalCancelButton {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.Organisation-ModalCancelButton:hover:not(:disabled) {
+  background-color: #f5f5f5;
+}
+
+.Organisation-ModalDeleteButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #d32f2f;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.Organisation-ModalDeleteButton:hover:not(:disabled) {
+  background-color: #b71c1c;
+}
+
+.Organisation-ModalCancelButton:disabled,
+.Organisation-ModalDeleteButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .Organisation-Container {
+    flex-direction: column;
+  }
+
+  .Organisation-Sidebar {
+    width: 100%;
+    min-width: auto;
+    padding: 1rem;
+  }
+
+  .Organisation-Content {
+    padding: 1rem;
+  }
+
+  .Organisation-Header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .Organisation-PageTitle {
+    font-size: 1.5rem;
+  }
+
+  .Organisation-EditButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .Organisation-SaveButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .Organisation-ModalActions {
+    flex-direction: column;
+  }
+
+  .Organisation-ModalCancelButton,
+  .Organisation-ModalDeleteButton {
+    width: 100%;
+  }
+
+  .Organisation-Table {
+    font-size: 0.9rem;
+  }
+
+  .Organisation-Label {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Organisation-Card {
+    padding: 1rem;
+  }
+
+  .Organisation-Label {
+    min-width: 100px;
+    font-size: 0.9rem;
+  }
+
+  .Organisation-Input {
+    font-size: 0.9rem;
+  }
+}

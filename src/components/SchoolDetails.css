@@ -1,0 +1,70 @@
+.schoolform{
+  *{
+    font-family: 'Albert Sans';
+  }
+  .inslect {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* background-color: white; */
+    /* border: 1px solid #ccc; */
+    /* padding: 8px 32px 8px 12px; */
+    /* font-size: 14px; */
+    /* border-radius: 4px; */
+    color: #333;
+    width: 100%;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%3A556A' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 38px;
+    cursor: pointer;
+  }
+  .form-row{
+    margin-bottom: 0;
+  }
+  .contit{
+    margin-bottom: 10px;
+  }
+  .form-group input::placeholder {
+    color: #BDBDBD;
+  }
+  
+  .inslect:focus {
+    outline: none;
+    border-color: #6366f1; /* Tailwind indigo-500 */
+  }
+  .sub-but{
+    margin: auto;
+  }
+  .select-container {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* background-color: white; */
+    /* border: 1px solid #ccc; */
+    /* padding: 8px 32px 8px 12px; */
+    /* font-size: 14px; */
+    /* border-radius: 4px; */
+    color: #333;
+    width: 100%;
+
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%3A556A' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 38px;
+    cursor: pointer;
+  }
+  
+  .custom-select:focus {
+    outline: none;
+    border-color: #6366f1; /* Tailwind indigo-500 */
+  }
+  
+  
+      
+}
