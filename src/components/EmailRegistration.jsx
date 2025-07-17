@@ -199,7 +199,8 @@ const EmailRegistration = () => {
               {(touched.firstName || hasSubmitted) && formErrors.firstName && <p className="input-error">{formErrors.firstName}</p>}
             </div>
             <div className="form-group">
-              <Input label="Middle Name (optional)" name="middleName" value={formData.middleName} onChange={handleChange} onBlur={handleBlur} />
+              <Input label="Middle Name (optional)" name="middleName" value={formData.middleName} onChange={handleChange} onBlur={handleBlur} placeholder="Middle Name"
+              />
               {(touched.middleName || hasSubmitted) && formErrors.middleName && <p className="input-error">{formErrors.middleName}</p>}
             </div>
           </div>

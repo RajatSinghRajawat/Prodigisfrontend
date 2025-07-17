@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './AdditionalDetails.css';
+import Input from './common/Input';
 import { useNavigate } from 'react-router-dom';
 
 const gradeOptions = [
