@@ -19,9 +19,11 @@ const Input = React.forwardRef(({
   return (
     <div className={`input-container ${className}`} style={{ position: 'relative' }}>
       {label && (
-        <label htmlFor={name} className="input-label">
-          {label}
-          {required && <span className="required">*</span>}
+        <label htmlFor={name} className="input-label d-flex">
+         <div>
+         {label}
+         {required && <span className="required">*</span>}
+         </div>
         </label>
       )}
       <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>

@@ -87,7 +87,7 @@ const Registration = () => {
                   }
                 }
               }}
-              placeholder="9876543210"
+              placeholder="Enter your Mobile Number"
               type="tel"
               required
               error={mobileError}
@@ -95,7 +95,7 @@ const Registration = () => {
           </div>
           {mobileError && <p className="input-error">{mobileError}</p>}
           
-          {/* Test mode notice */}
+          {/* Test mode notice
           <div style={{ 
             background: '#fff3cd', 
             border: '1px solid #ffeaa7', 
@@ -106,7 +106,7 @@ const Registration = () => {
             color: '#856404'
           }}>
             <strong>Test Mode:</strong> For testing purposes, please use the mobile number: <strong>8838838838</strong>
-          </div>
+          </div> */}
 
           <div className="form-action">
             <div className="terms-checkbox">

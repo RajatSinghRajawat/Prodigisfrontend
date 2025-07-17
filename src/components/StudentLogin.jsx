@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './StudentLogin.css';
+// import './Registration.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { API_BASE_URL, API_ENDPOINTS } from '../config/apiConfig';
 import { toast } from 'react-toastify';
@@ -163,8 +164,8 @@ const StudentLogin = () => {
           {errors.email && <p className="error-message">{errors.email}</p>}
 
           <div className="form-group password-group" style={{ position: "relative" }}>
-            <label htmlFor="password">Password</label>
-            <input
+            <Input
+              label="Password"
               id="password"
               name="password"
               type={showPassword ? "text" : "password"}
@@ -174,12 +175,14 @@ const StudentLogin = () => {
               required
               className="password-input"
               autoComplete="off"
-            />
-            <img
-              src={showPassword ? eyeOffIcon : eyeIcon}
-              alt={showPassword ? "Hide password" : "Show password"}
-              className="password-toggle-icon"
-              onClick={() => setShowPassword(!showPassword)}
+              icon={
+                <img
+                  src={showPassword ? eyeOffIcon : eyeIcon}
+                  alt={showPassword ? "Hide password" : "Show password"}
+                  className="password-toggle-icon"
+                  onClick={() => setShowPassword(!showPassword)}
+                />
+              }
             />
           </div>
           {formData.password && getPasswordErrors(formData.password).length > 0 && (
