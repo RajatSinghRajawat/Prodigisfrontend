@@ -116,7 +116,7 @@ const Registration = () => {
                 checked={acceptTerms}
                 onChange={(e) => setAcceptTerms(e.target.checked)}
               />
-              <label htmlFor="terms">I accept the terms & Condition</label>
+              <label htmlFor="terms" style={{color: 'blue'}}>I accept the terms & Condition</label>
             </div>
 
             <button
