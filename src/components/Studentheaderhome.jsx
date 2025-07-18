@@ -57,12 +57,12 @@ const Studentheaderhome = () => {
             <div className="logo-img">
               {/* <img src={headerlogo} alt="logo" /> */}
             </div>
-            <span className="logo-text">Prodigi</span>
+            <Link style={{textDecoration:"none"}} to="/"><span className="logo-text">Prodigi</span></Link>
           </div>
           <div className="nav-links">
             <Link to="/" className="active">Home</Link>
             <Link to="/schoolHome">Schools</Link>
-            <Link to="#">Exam Institutes</Link>
+            <Link to="/organiser">Exam Institutes</Link>
             <Link to="#">Testimonial</Link>
             <Link to="/compition">Competitions</Link>
           

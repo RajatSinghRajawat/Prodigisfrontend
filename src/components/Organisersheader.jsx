@@ -128,7 +128,9 @@ const Organisersheader = () => {
         <nav className="navbar">
           <div className="logo">
             <img src={headerlogo} alt="Prodigi Logo" />
+            <NavLink style={{textDecoration:"none"}} to="/organiser">
             <span className="logo-text">Prodigi</span>
+            </NavLink>
           </div>
           
           {/* Mobile Menu Button */}
